@@ -1,0 +1,24 @@
+{
+    "name": "bittorrent-tracker-downloads-bot",
+    "version": "1.0.0",
+    "description": "BitTorrent tracker downloads bot",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LockBlock-dev/NoSussyLinks.git"
+    },
+    "author": "LockBlock-dev",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/LockBlock-dev/NoSussyLinks/issues"
+    },
+    "homepage": "https://github.com/LockBlock-dev/NoSussyLinks#readme",
+    "dependencies": {
+        "axios": "^0.25.0",
+        "bencode": "^2.0.2",
+        "parse-torrent": "^9.1.4"
+    }
+}

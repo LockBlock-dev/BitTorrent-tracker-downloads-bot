@@ -54,7 +54,7 @@ const req = async (url, proxy, count) => {
                 try {
                     res = bencode.decode(Buffer.from(response.data), "utf8");
                 } catch {}
-                Object.assign(count, res);
+                Object.assign(count, { seeders: res.complete, completed: res.downloaded, leechers: res.incomplete });
             }
         })
         .catch((error) => {

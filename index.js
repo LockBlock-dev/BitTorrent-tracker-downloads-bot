@@ -93,7 +93,7 @@ const main = async () => {
     let count = { proxies_left: 0, error: 0 };
 
     let proxies = fs.readFileSync(`${__dirname}/proxies.txt`, "utf-8")
-    proxies = proxies.split("\r\n");
+    proxies =  proxies.replaceAll("\r\n","\n").split("\n");
 
     count.proxies_left = proxies.length;
 
@@ -122,13 +122,13 @@ const main = async () => {
     for (let proxy in proxies) {
         req(url_start, proxies[proxy], count);
 
-        await sleep(1000);
+        await sleep(100);
 
         req(url_end, proxies[proxy], count);
 
         count.proxies_left -= 1;
 
-        sleep(500);
+        await sleep(100);
     }
 };
 

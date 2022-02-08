@@ -20,7 +20,7 @@ Tested on a HTTP tracker only.
 
 ```json
 {
-    "trackerURL": "http://tracker-exemple.com:1234/announce",
+    "trackerURL": "http://tracker-example.com:1234/announce",
     "torrentFileName": "torrent_file_example.torrent"
 }
 ```
